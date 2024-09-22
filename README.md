@@ -1,7 +1,7 @@
 ## Kubiki Game
 
 Kubiki is a timeless puzzle game where players must manage falling pieces called "shapes." The primary goal is to create complete horizontal lines of blocks to clear them from the game field. As lines are cleared, blocks above them fall down, and the player continues to work towards achieving the highest score possible.
-The game is a compact 18KB and can be run on any PC with Java Runtime Environment (JRE) installed.
+The game is a compact 17.7KB and can be run on any PC with Java Runtime Environment (JRE) installed.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/gkonovalov/kubiki/master/gameplay.gif" />
