@@ -7,7 +7,7 @@ The game is a compact 17.7KB and can be run on any PC with Java Runtime Environm
   <img src="https://raw.githubusercontent.com/gkonovalov/kubiki/master/gameplay.gif" />
 </p>
 
-## Game Mechanics & Features
+## Game Features
 - **Shapes**: The game features different geometric shapes made up of four blocks each. These shapes fall from the top of the play field.
 - **Movement and Rotation**: Players can move shapes laterally and rotate them to fit them into place. The falling speed of the pieces cannot be slowed down, but in most versions, players can accelerate their descent.
 - **Objective**: The main objective is to arrange the shapes to form complete horizontal lines. When a line is completed, it disappears, causing any blocks above to fall down a rank.
