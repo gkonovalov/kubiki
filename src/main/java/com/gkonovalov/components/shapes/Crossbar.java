@@ -25,7 +25,7 @@ import java.awt.*;
 /**
  * <p>
  * This class represents the long "Crossbar" shape, extending the Shape class.
- * It initializes an "Crossbar" configuration with coordinates (0,-1), (0,-2), (0,0), (-1,0), (1,0)
+ * It initializes an "Crossbar" configuration with coordinates (0,0), (0,-1), (0,-2), (1,0), (-1,0)
  * and assigns a green color to it.
  * </p>
  */

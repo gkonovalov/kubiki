@@ -25,7 +25,7 @@ import java.awt.*;
 /**
  * <p>
  * This class represents the "Bowl" shape, extending the Shape class.
- * It initializes a "Bowl" configuration with coordinates (0, -1), (0,0), (-1,-1), (0,-1), (-1,1).
+ * It initializes a "Bowl" configuration with coordinates (0, -1), (1,0), (-1,0), (1,-1), (-1,-1).
  * and assigns a cyan color to it.
  * </p>
  */
@@ -33,11 +33,11 @@ public class Bowl extends Shape {
 
     public Bowl() {
         super(5,  new Color(66, 214, 223), new Point[]{
-                new Point(0, 1),
-                new Point(0, 0),
-                new Point(-1, -1),
                 new Point(0, -1),
-                new Point(-1, 1)
+                new Point(1, 0),
+                new Point(-1, 0),
+                new Point(1, -1),
+                new Point(-1, -1)
         });
     }
 }
