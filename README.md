@@ -4,7 +4,7 @@ Kubiki is a timeless puzzle game where players must manage falling pieces called
 The game is a compact 18KB and can be run on any PC with Java Runtime Environment (JRE) installed.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gkonovalov/kubiki-game/master/gameplay.gif" />
+  <img src="https://raw.githubusercontent.com/gkonovalov/kubiki/master/gameplay.gif" />
 </p>
 
 ## Game Mechanics & Features
