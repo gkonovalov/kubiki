@@ -14,7 +14,7 @@ The game is a compact 17.7KB and can be run on any PC with Java Runtime Environm
 - **Score Tracking**: Tracks the player’s score.
 - **Speed Adjustment**: Increases game speed as lines are cleared.
 
-### Controls:
+### Controls
 - **Arrow Keys**: Move the shape left, right, or down.
 - **Up Arrow**: Rotate the shape.
 - **Space**: Drop the shape immediately.
