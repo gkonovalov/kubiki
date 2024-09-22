@@ -27,6 +27,7 @@ If you have the JAR file for the Kubiki game, you can launch it using the follow
 1. **Download the JAR File**: Ensure you have the Kubiki JAR file. If you don’t have it, you can build it from the source code provided in this repository.
 2. **Open a Terminal or Command Prompt**: Navigate to the directory where the JAR file is located.
 3. **Run the JAR File**: Use the `java -jar` command to launch the game. For example:
+
    ```bash
    java -jar kubiki.jar
 
