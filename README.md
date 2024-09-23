@@ -16,7 +16,7 @@ The game is a compact 17.7KB and can be run on any PC with Java Runtime Environm
 - **Speed Adjustment**: Increases game speed as lines are cleared.
 
 ### Controls
-- **Enter**: To start the game.
+- **Enter**: Start the game.
 - **↑**: Rotate shape.
 - **←**: Move shape to the left.
 - **→**: Move shape to the right.
