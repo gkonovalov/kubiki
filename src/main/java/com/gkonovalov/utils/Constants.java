@@ -36,8 +36,9 @@ public class Constants {
 
     public static String STRING_APP_NAME = "Kubiki";
     public static String STRING_GAME_DESCRIPTION = "Kubiki is a timeless puzzle game where players must \nmanage falling pieces called \"shapes.\" The primary \ngoal is to create complete horizontal lines of blocks to \nclear them from the game field. As lines are cleared, \nblocks above them fall down, and the player continues \nto work towards achieving the highest score possible.";
-    public static String STRING_GAME_INSTRUCTIONS = "Control keys:\n\nEnter: to start the game\n↑: rotate shape\n←: move shape to the left\n→: move shape to the right\n↓: drop shape\nEsc: exit game";
+    public static String STRING_GAME_INSTRUCTIONS = "Control keys:\n\nEnter: to start the game\nP: to pause the game\n↑: rotate shape\n←: move shape to the left\n→: move shape to the right\n↓: drop shape\nEsc: exit game";
     public static String STRING_GAME_OVER = "Game Over!";
+    public static String STRING_GAME_PAUSED = "Game Paused!";
     public static String STRING_YOUR_SCORE = "Your score is: %s";
     public static String STRING_PRESS_ENTER_TO_START_AGAIN = "Press Enter to start again!";
 

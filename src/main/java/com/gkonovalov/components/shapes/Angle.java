@@ -3,7 +3,7 @@ package com.gkonovalov.components.shapes;
 import com.gkonovalov.components.Point;
 import com.gkonovalov.components.Shape;
 
-import java.awt.*;
+import static com.gkonovalov.components.Colors.*;
 
 /*
  * Copyright (C) 2024 Georgiy Konovalov
@@ -32,7 +32,7 @@ import java.awt.*;
 public class Angle extends Shape {
 
     public Angle() {
-        super(3,  new Color(255, 36, 229), new Point[]{
+        super(1, PINK, new Point[]{
                 new Point(0, 0),
                 new Point(-1, -1),
                 new Point(0, -1)

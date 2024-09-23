@@ -5,6 +5,7 @@ import com.gkonovalov.components.shapes.Dot;
 import com.gkonovalov.components.Point;
 import com.gkonovalov.components.Shape;
 import com.gkonovalov.components.Shapes;
+import com.gkonovalov.components.shapes.XRay;
 import com.gkonovalov.listeners.KeyListener;
 import com.gkonovalov.components.Direction;
 import com.gkonovalov.components.GameStatus;
@@ -13,9 +14,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
+import static com.gkonovalov.components.Colors.BLACK;
 import static com.gkonovalov.utils.Constants.*;
-import static com.gkonovalov.utils.StringUtils.showGameOverMessage;
-import static com.gkonovalov.utils.StringUtils.showWelcomeMessage;
+import static com.gkonovalov.utils.StringUtils.*;
 
 /*
  * Copyright (C) 2024 Georgiy Konovalov
@@ -130,6 +131,9 @@ public class Kubiki extends JPanel implements KeyListener, Runnable {
             case PLAYING:
                 drawMovingBox(g);
                 break;
+            case PAUSE:
+                showPauseMessage(g);
+                break;
         }
 
         g.dispose();
@@ -137,12 +141,17 @@ public class Kubiki extends JPanel implements KeyListener, Runnable {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-            restartGame();
+        switch (e.getKeyCode()) {
+            case KeyEvent.VK_P:
+                pause();
+                break;
         }
 
         if (isPlaying()) {
             switch (e.getKeyCode()) {
+                case KeyEvent.VK_ESCAPE:
+                    restartGame();
+                    break;
                 case KeyEvent.VK_LEFT:
                     move(Direction.LEFT);
                     break;
@@ -165,6 +174,14 @@ public class Kubiki extends JPanel implements KeyListener, Runnable {
         }
 
         repaint();
+    }
+
+    private void pause() {
+        if (status == GameStatus.PLAYING) {
+            status = GameStatus.PAUSE;
+        } else if (status == GameStatus.PAUSE) {
+            status = GameStatus.PLAYING;
+        }
     }
 
     private void rotate() {
@@ -229,7 +246,11 @@ public class Kubiki extends JPanel implements KeyListener, Runnable {
             int row = shape.getPosition().x + point.y;
             int col = shape.getPosition().y + point.x;
 
-            drawBox(g, row, col, shape.getColor());
+            if (shape instanceof XRay) {
+                drawBox(g, row, col, BLACK);
+            } else {
+                drawBox(g, row, col, shape.getColor());
+            }
         }
     }
 

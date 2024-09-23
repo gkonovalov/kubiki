@@ -3,7 +3,7 @@ package com.gkonovalov.components.shapes;
 import com.gkonovalov.components.Point;
 import com.gkonovalov.components.Shape;
 
-import java.awt.*;
+import static com.gkonovalov.components.Colors.*;
 
 /*
  * Copyright (C) 2024 Georgiy Konovalov
@@ -26,13 +26,13 @@ import java.awt.*;
  * <p>
  * This class represents a "Dot" shape, extending the Shape class.
  * It initializes a "Dot" shape with coordinates (0,0)
- * and assigns a gray color to it.
+ * and assigns a red color to it.
  * </p>
  */
 public class Dot extends Shape {
 
     public Dot() {
-        super(1, new Color(167, 167, 167), new Point[]{
+        super(5, RED, new Point[]{
                 new Point(0, 0)
         });
     }

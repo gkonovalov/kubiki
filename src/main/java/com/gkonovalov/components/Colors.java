@@ -1,9 +1,6 @@
-package com.gkonovalov.components.shapes;
+package com.gkonovalov.components;
 
-import com.gkonovalov.components.Point;
-import com.gkonovalov.components.Shape;
-
-import static com.gkonovalov.components.Colors.*;
+import java.awt.*;
 
 /*
  * Copyright (C) 2024 Georgiy Konovalov
@@ -24,17 +21,18 @@ import static com.gkonovalov.components.Colors.*;
 
 /**
  * <p>
- * This class represents the short "Pillar" shape, extending the Shape class.
- * It initializes a straight vertical line with coordinates (0,0), (0,1)
- * and assigns a violet color to it.
+ * The `Colors` class represents list of Colors used in the game.
  * </p>
  */
-public class Pillar extends Shape {
+public class Colors {
 
-    public Pillar() {
-        super(6, VIOLET, new Point[]{
-                new Point(0, 0),
-                new Point(0, 1)
-        });
-    }
+    public static Color BLACK = new Color(0,0,0);
+    public static Color RED = new Color(255, 15, 15);
+    public static Color GRAY = new Color(167, 167, 167);
+    public static Color PINK = new Color(255, 36, 229);
+    public static Color CYAN = new Color(66, 214, 223);
+    public static Color YELLOW = new Color(255, 219, 9);
+    public static Color GREEN = new Color(144, 219, 23);
+    public static Color VIOLET = new Color(185, 15, 255, 255);
+
 }

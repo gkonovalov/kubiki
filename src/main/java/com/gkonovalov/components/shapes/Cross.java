@@ -3,7 +3,7 @@ package com.gkonovalov.components.shapes;
 import com.gkonovalov.components.Point;
 import com.gkonovalov.components.Shape;
 
-import java.awt.*;
+import static com.gkonovalov.components.Colors.*;
 
 /*
  * Copyright (C) 2024 Georgiy Konovalov
@@ -32,7 +32,7 @@ import java.awt.*;
 public class Cross extends Shape {
 
     public Cross() {
-        super(6, new Color(255, 219, 9), new Point[]{
+        super(3, YELLOW, new Point[]{
                 new Point(0, -1),
                 new Point(0, 0),
                 new Point(1, 0),

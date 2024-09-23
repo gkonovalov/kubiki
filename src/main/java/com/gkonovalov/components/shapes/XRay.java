@@ -24,17 +24,21 @@ import static com.gkonovalov.components.Colors.*;
 
 /**
  * <p>
- * This class represents the short "Pillar" shape, extending the Shape class.
- * It initializes a straight vertical line with coordinates (0,0), (0,1)
- * and assigns a violet color to it.
+ * This class represents the short "XRay" shape, extending the Shape class.
+ * It initializes a straight vertical line with coordinates (0, -1), (1,0), (-1,0), (1,-1), (-1,-1), (0,0)
+ * this shape can go through other shapes.
  * </p>
  */
-public class Pillar extends Shape {
+public class XRay extends Shape {
 
-    public Pillar() {
-        super(6, VIOLET, new Point[]{
-                new Point(0, 0),
-                new Point(0, 1)
+    public XRay() {
+        super(7, GRAY, new Point[]{
+                new Point(0, -1),
+                new Point(1, 0),
+                new Point(-1, 0),
+                new Point(1, -1),
+                new Point(-1, -1),
+                new Point(0, 0)
         });
     }
 }

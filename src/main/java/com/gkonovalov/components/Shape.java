@@ -1,6 +1,7 @@
 package com.gkonovalov.components;
 
 import java.awt.*;
+
 import static com.gkonovalov.utils.Constants.COLS;
 
 /*
@@ -25,7 +26,7 @@ import static com.gkonovalov.utils.Constants.COLS;
  * This class represents a generic shape used in a Kubiki game.
  * It manages the shape's position, rotation, and color. Each shape is initialized
  * with a specific configuration, an ID, and a color.
- *
+ * <p>
  * The shape can be rotated 90 degrees clockwise, moved according to directions,
  * and reset to its initial position. The default starting position is row 1
  * and column centered in the grid.

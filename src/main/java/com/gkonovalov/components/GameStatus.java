@@ -26,6 +26,8 @@ package com.gkonovalov.components;
 public enum GameStatus {
 
     PLAYING,
+    PAUSE,
     GAME_OVER,
     READY
+
 }

@@ -32,6 +32,10 @@ import static com.gkonovalov.utils.Constants.*;
  */
 public class StringUtils {
 
+    public static void showPauseMessage(Graphics2D g) {
+        drawStringCenter(g, STRING_GAME_PAUSED, 32, 235);
+    }
+
     public static void showGameOverMessage(Graphics2D g, int score) {
         drawStringCenter(g, STRING_GAME_OVER, 32, 200);
         drawStringCenter(g, String.format(STRING_YOUR_SCORE, score), 16,235);

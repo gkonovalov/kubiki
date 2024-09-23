@@ -3,7 +3,7 @@ package com.gkonovalov.components.shapes;
 import com.gkonovalov.components.Point;
 import com.gkonovalov.components.Shape;
 
-import java.awt.*;
+import static com.gkonovalov.components.Colors.*;
 
 /*
  * Copyright (C) 2024 Georgiy Konovalov
@@ -32,7 +32,7 @@ import java.awt.*;
 public class Crossbar extends Shape {
 
     public Crossbar() {
-        super(4, new Color(144, 219, 23), new Point[]{
+        super(4, GREEN, new Point[]{
                 new Point(0, 0),
                 new Point(0, -1),
                 new Point(0, -2),

@@ -1,6 +1,7 @@
 package com.gkonovalov.components;
 
 import com.gkonovalov.components.shapes.*;
+
 import java.util.HashMap;
 import java.util.Random;
 
@@ -30,12 +31,13 @@ import java.util.Random;
 public class Shapes {
 
     private HashMap<Integer, Shape> shapes = new HashMap<>() {{
-        put(1, new Dot());
-        put(2, new Pillar());
-        put(3, new Angle());
+        put(1, new Angle());
+        put(2, new Bowl());
+        put(3, new Cross());
         put(4, new Crossbar());
-        put(5, new Bowl());
-        put(6, new Cross());
+        put(5, new Dot());
+        put(6, new Pillar());
+        put(7, new XRay());
     }};
 
     private Random rnd;
@@ -45,9 +47,9 @@ public class Shapes {
     }
 
     public Shape getRandomShape() {
-        Shape newShape = shapes.get(rnd.nextInt(shapes.size()) + 1);
-        newShape.resetPosition();
-        return newShape;
+        Shape shape = shapes.get(rnd.nextInt(shapes.size()) + 1);
+        shape.resetPosition();
+        return shape;
     }
 
     public Shape getShapeById(int id) {

@@ -1,5 +1,7 @@
 package com.gkonovalov.components;
 
+import com.gkonovalov.components.shapes.XRay;
+
 import java.util.Arrays;
 
 import static com.gkonovalov.utils.Constants.*;
@@ -40,7 +42,8 @@ public class Grid {
         if (isValidPosition(row, col)) {
             return grid[row][col];
         }
-        return -1;
+
+        return EMPTY;
     }
 
     public void putShape(int row, int col, int shapeId) {
@@ -54,22 +57,27 @@ public class Grid {
     }
 
     public boolean canMove(Shape shape, Direction direction) {
-        return canMove(shape.getShape(), direction, shape.getPosition());
+        return canMove(shape.getShape(), direction, shape.getPosition(), shape instanceof XRay);
     }
 
     public boolean canMoveWithRotation(Shape shape) {
-        return canMove(rotateShape(shape.getShape()), Direction.HOLD, shape.getPosition());
+        return canMove(rotateShape(shape.getShape()), Direction.HOLD, shape.getPosition(), shape instanceof XRay);
     }
 
-    private boolean canMove(Point[] shape, Direction direction, Point position) {
+    private boolean canMove(Point[] shape, Direction direction, Point position, boolean isXray) {
         for (Point point : shape) {
             int col = position.y + direction.getX() + point.x;
             int row = position.x + direction.getY() + point.y;
 
-            if (!isValidPosition(row, col) || grid[row][col] != EMPTY) {
+            if (!isValidPosition(row, col)) {
+                return false;
+            }
+
+            if (grid[row][col] != EMPTY && !isXray) {
                 return false;
             }
         }
+
         return true;
     }
 
@@ -100,6 +108,7 @@ public class Grid {
             Point point = shape[i];
             rotated[i] = new Point(point.y, -point.x);
         }
+
         return rotated;
     }
 
@@ -109,6 +118,7 @@ public class Grid {
                 return false;
             }
         }
+
         return true;
     }
 
