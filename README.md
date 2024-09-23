@@ -16,11 +16,12 @@ The game is a compact 17.7KB and can be run on any PC with Java Runtime Environm
 - **Speed Adjustment**: Increases game speed as lines are cleared.
 
 ### Controls
-- **Arrow Keys**: Move the shape left, right, or down.
-- **Up Arrow**: Rotate the shape.
-- **Space**: Drop the shape immediately.
-- **Enter**: Start or restart the game.
-- **Escape**: Exit the game.
+- **Enter**: To start the game.
+- **↑**: Rotate shape.
+- **←**: Move shape to the left.
+- **→**: Move shape to the right.
+- **↓**: Drop shape
+- **Esc**: Exit the game.
 
 ## Running the Game
 If you have the JAR file for the Kubiki game, you can launch it using the following steps:
