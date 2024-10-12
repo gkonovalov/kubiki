@@ -1,7 +1,6 @@
 package com.gkonovalov.components.shapes;
 
 import com.gkonovalov.components.Point;
-import com.gkonovalov.components.Shape;
 
 import static com.gkonovalov.components.Colors.*;
 

@@ -1,4 +1,7 @@
-package com.gkonovalov.components;
+package com.gkonovalov.components.shapes;
+
+import com.gkonovalov.components.Direction;
+import com.gkonovalov.components.Point;
 
 import java.awt.*;
 
@@ -36,17 +39,17 @@ public class Shape {
 
     private int id;
     private Color color;
-    private Point position;
-    private Point[] shape;
+    private com.gkonovalov.components.Point position;
+    private com.gkonovalov.components.Point[] shape;
 
-    public Shape(int id, Color color, Point[] shape) {
+    public Shape(int id, Color color, com.gkonovalov.components.Point[] shape) {
         this.shape = shape;
         this.id = id;
         this.color = color;
-        this.position = new Point(1, COLS / 2);
+        this.position = new com.gkonovalov.components.Point(1, COLS / 2);
     }
 
-    public Point[] getShape() {
+    public com.gkonovalov.components.Point[] getShape() {
         return shape;
     }
 
@@ -59,14 +62,14 @@ public class Shape {
     }
 
     public void rotate() {
-        for (Point s : shape) {
+        for (com.gkonovalov.components.Point s : shape) {
             int tmp = s.x;
             s.x = s.y;
             s.y = -tmp;
         }
     }
 
-    public Point getPosition() {
+    public com.gkonovalov.components.Point getPosition() {
         return position;
     }
 

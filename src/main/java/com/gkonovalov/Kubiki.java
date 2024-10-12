@@ -3,7 +3,7 @@ package com.gkonovalov;
 import com.gkonovalov.components.Grid;
 import com.gkonovalov.components.shapes.Dot;
 import com.gkonovalov.components.Point;
-import com.gkonovalov.components.Shape;
+import com.gkonovalov.components.shapes.Shape;
 import com.gkonovalov.components.Shapes;
 import com.gkonovalov.components.shapes.XRay;
 import com.gkonovalov.listeners.KeyListener;

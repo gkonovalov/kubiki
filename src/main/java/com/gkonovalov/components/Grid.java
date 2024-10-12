@@ -1,5 +1,6 @@
 package com.gkonovalov.components;
 
+import com.gkonovalov.components.shapes.Shape;
 import com.gkonovalov.components.shapes.XRay;
 
 import java.util.Arrays;
