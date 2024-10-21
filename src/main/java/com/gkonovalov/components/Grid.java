@@ -62,7 +62,7 @@ public class Grid {
     }
 
     public boolean canMoveWithRotation(Shape shape) {
-        return canMove(rotateShape(shape.getShape()), Direction.HOLD, shape.getPosition(), shape instanceof XRay);
+        return canMove(shape.rotateCopy(), Direction.HOLD, shape.getPosition(), shape instanceof XRay);
     }
 
     private boolean canMove(Point[] shape, Direction direction, Point position, boolean isXray) {
@@ -100,17 +100,6 @@ public class Grid {
         for (int[] item : grid) {
             Arrays.fill(item, EMPTY);
         }
-    }
-
-    private Point[] rotateShape(Point[] shape) {
-        Point[] rotated = new Point[shape.length];
-
-        for (int i = 0; i < shape.length; i++) {
-            Point point = shape[i];
-            rotated[i] = new Point(point.y, -point.x);
-        }
-
-        return rotated;
     }
 
     private boolean isRowFilled(int row) {

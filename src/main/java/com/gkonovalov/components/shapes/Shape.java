@@ -39,17 +39,17 @@ public class Shape {
 
     private int id;
     private Color color;
-    private com.gkonovalov.components.Point position;
-    private com.gkonovalov.components.Point[] shape;
+    private Point position;
+    private Point[] shape;
 
-    public Shape(int id, Color color, com.gkonovalov.components.Point[] shape) {
+    public Shape(int id, Color color, Point[] shape) {
         this.shape = shape;
         this.id = id;
         this.color = color;
-        this.position = new com.gkonovalov.components.Point(1, COLS / 2);
+        this.position = new Point(1, COLS / 2);
     }
 
-    public com.gkonovalov.components.Point[] getShape() {
+    public Point[] getShape() {
         return shape;
     }
 
@@ -62,14 +62,25 @@ public class Shape {
     }
 
     public void rotate() {
-        for (com.gkonovalov.components.Point s : shape) {
+        for (Point s : shape) {
             int tmp = s.x;
             s.x = s.y;
             s.y = -tmp;
         }
     }
 
-    public com.gkonovalov.components.Point getPosition() {
+    public Point[] rotateCopy() {
+        Point[] rotated = new Point[shape.length];
+
+        for (int i = 0; i < shape.length; i++) {
+            Point point = shape[i];
+            rotated[i] = new Point(point.y, -point.x);
+        }
+
+        return rotated;
+    }
+
+    public Point getPosition() {
         return position;
     }
 
