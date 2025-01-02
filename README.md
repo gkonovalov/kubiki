@@ -50,4 +50,4 @@ To clone the repository, follow these steps:
    git clone https://github.com/gkonovalov/kubiki.git
 
 ------------
-Georgiy Konovalov 2024 (c) [GNU GPLv3 License](https://opensource.org/license/gpl-3-0)
+Georgiy Konovalov 2025 (c) [GNU GPLv3 License](https://opensource.org/license/gpl-3-0)
